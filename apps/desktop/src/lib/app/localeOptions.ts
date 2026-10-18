@@ -1,8 +1,7 @@
 import type { Locale } from "@/i18n";
 
 export const LOCALE_OPTIONS: { value: Locale; flag: string; label: string }[] = [
-  { value: "pl", flag: "🇵🇱", label: "Polski" },
-  { value: "en", flag: "🇬🇧", label: "English" },
+  { value: "en", flag: "🇺🇸", label: "English" },
   { value: "az", flag: "🇦🇿", label: "Azərbaycan" },
   { value: "es", flag: "🇪🇸", label: "Español" },
   { value: "id", flag: "🇮🇩", label: "Bahasa Indonesia" },
@@ -10,6 +9,7 @@ export const LOCALE_OPTIONS: { value: Locale; flag: string; label: string }[] = 
   { value: "ja", flag: "🇯🇵", label: "日本語" },
   { value: "ko", flag: "🇰🇷", label: "한국어" },
   { value: "pt-BR", flag: "🇧🇷", label: "Português" },
+  { value: "pl", flag: "🇵🇱", label: "Polski" },
   { value: "ru", flag: "🇷🇺", label: "Русский" },
   { value: "th", flag: "🇹🇭", label: "ภาษาไทย" },
   { value: "tr", flag: "🇹🇷", label: "Türkçe" },

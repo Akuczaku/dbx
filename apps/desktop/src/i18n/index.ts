@@ -11,8 +11,8 @@ type I18nGlobal = {
 };
 
 const supportedLocales: Locale[] = ["az", "en", "es", "id", "it", "ja", "ko", "pt-BR", "pl", "ru", "th", "tr", "zh-CN", "zh-TW"];
-const defaultLocale: Locale = "pl";
-const loadedLocales = new Set<Locale>(["en"]);
+const defaultLocale: Locale = "en";
+const loadedLocales = new Set<Locale>([defaultLocale]);
 const localeLoaders: Record<Exclude<Locale, "en">, () => Promise<{ default: LocaleMessages }>> = {
   az: () => import("./locales/az"),
   es: () => import("./locales/es"),
@@ -88,7 +88,7 @@ let localeRequestId = 0;
 const i18n = createI18n({
   legacy: false,
   locale: initialLocale,
-  fallbackLocale: "en",
+  fallbackLocale: defaultLocale,
   messages: {
     en,
   },

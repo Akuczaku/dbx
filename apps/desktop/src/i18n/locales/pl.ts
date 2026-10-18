@@ -1,3 +1,4 @@
+import { withEnglishFallback } from "./fallback";
 import { redisGroupingPl as redisGrouping } from "./redisGrouping";
 import docs from "./docs/pl";
 import { dataDictionaryPl as dataDictionary } from "./dataDictionaryMessages";
@@ -21,7 +22,7 @@ const consul = {
   delete: "Usuń",
   deleteTitle: "Usuń klucz Consul KV",
   keyLabel: "Klucz",
-  keyPlaceholder: "sciezka/do/klucza",
+  keyPlaceholder: "ścieżka/do/klucza",
   keyRequired: "Klucz jest wymagany",
   rootReadonly: "Nie można zmienić prefiksu głównego. Wprowadź ścieżkę klucza.",
   saved: "Zapisano klucz",
@@ -60,7 +61,7 @@ const consul = {
   },
 };
 
-export default {
+export default withEnglishFallback({
   modelGeneration: {
     title: "Generuj model",
     editTemplate: "Edytuj szablon",
@@ -11768,4 +11769,4 @@ export default {
     authFailed: "Nie można sprawdzić uwierzytelnienia DBX.",
     retry: "Ponów",
   },
-};
+});
